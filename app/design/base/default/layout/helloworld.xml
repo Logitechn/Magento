@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <!-- update layout for all frontend page -->
+    </default>
+    <helloworld_index_index>
+        <reference name="content">
+            <block type="helloworld/helloworld" name="home"
+                   template="helloworld/home.phtml" />
+        </reference>
+    </helloworld_index_index>
+
+    <helloworld_index_sign_up>
+        <reference name="content">
+            <block type="helloworld/helloworld" name="registrate"
+                   template="helloworld/registrate.phtml" />
+        </reference>
+    </helloworld_index_sign_up>
+
+    <helloworld_index_log>
+        <reference name="content">
+            <block type="helloworld/helloworld" name="login"
+                    template="helloworld/login.phtml" />
+        </reference>
+    </helloworld_index_log>
+
+    <helloworld_index_restaurant>
+        <reference name="content">
+            <block type="helloworld/helloworld" name="restaurant"
+                    template="helloworld/restaurant.phtml" />
+        </reference>
+    </helloworld_index_restaurant>
+</layout>

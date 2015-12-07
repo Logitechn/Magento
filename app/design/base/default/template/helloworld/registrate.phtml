@@ -1,0 +1,18 @@
+<form action="<?php echo Mage::getUrl('helloworld/index/registrate') ?>" method="post">
+    <fieldset>
+        <ul>
+            <li>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username"/>
+            </li>
+            <li>
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password" />
+            </li>
+            <li>
+                <input type="submit" value="Sign up" />
+            </li>
+        </ul>
+    </fieldset>
+</form>
+<a href="<?php echo Mage::getURl('helloworld');?>">Cancel</a>

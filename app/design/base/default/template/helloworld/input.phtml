@@ -1,0 +1,21 @@
+<form action="<?php echo Mage::getUrl('helloworld/index/input') ?>" method="post">
+    <fieldset>
+        <ul>
+            <li>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username"/>
+            </li>
+            <li>
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password" />
+            </li>
+            <li>
+                <label for="privileges">Privileges</label>
+                <input type="text" id="privileges" name="privileges"/>
+            </li>
+            <li>
+                <input type="submit" value="input" />
+            </li>
+        </ul>
+    </fieldset>
+</form>

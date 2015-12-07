@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Tutorialmagento_Helloworld>
+            <version>0.1.0</version>
+        </Tutorialmagento_Helloworld>
+    </modules>
+    <frontend>
+        <routers>
+            <helloworld>
+                <use>standard</use>
+                <args>
+                    <module>Tutorialmagento_Helloworld</module>
+                    <frontName>helloworld</frontName>
+                </args>
+            </helloworld>
+        </routers>
+        <layout>
+            <updates>
+                <helloworld>
+                    <file>helloworld.xml</file>
+                </helloworld>
+            </updates>
+        </layout>
+    </frontend>
+    <global>
+        <blocks>
+            <helloworld>
+                <class>Tutorialmagento_Helloworld_Block</class>
+            </helloworld>
+            <input>
+                <class>Tutorialmagento_Helloworld_Block</class>
+            </input>
+        </blocks>
+        <models>
+            <helloworld>
+                <class>Tutorialmagento_Helloworld_Model</class>
+                <resourceModel>helloworld_mysql4</resourceModel>
+            </helloworld>
+            <helloworld_mysql4>
+                <class>Tutorialmagento_Helloworld_Model_Mysql4</class>
+                <entities>
+                    <helloworld>
+                        <table>users</table>
+                    </helloworld>
+                </entities>
+            </helloworld_mysql4>
+        </models>
+        <!-- allow the plugin to read and write -->
+        <resources>
+            <!-- Database setup  -->
+       <!-- <helloworld_setup>
+                <setup>
+                    <module>Tutorialmagento_Helloworld</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </helloworld_setup> -->
+            <!-- connection to write -->
+            <helloworld_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </helloworld_write>
+            <!-- connection to read -->
+            <helloworld_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </helloworld_read>
+        </resources>
+    </global>
+</config>
